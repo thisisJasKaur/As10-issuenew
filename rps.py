@@ -4,6 +4,7 @@
 
 import random
 
+def play_game():
 user_action = input("Enter throw (rock, paper, scissors): ")
 ai_action = random.choice(["rock", "paper", "scissors"])
 
@@ -26,3 +27,10 @@ elif user_action == "scissors":
         print("Scissors cuts paper! You win!")
     else:
         print("Rock smashes scissors! You lose.")
+
+#Allow the user to play the game repeatedly until they decide to quit.
+while true:
+    play_game()
+    play_again = input("Do you want to play the game again? (y/n): ")
+    if play_again.lower() != "y":
+        break
